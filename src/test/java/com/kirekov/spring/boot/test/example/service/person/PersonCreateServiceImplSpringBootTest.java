@@ -13,6 +13,7 @@ import com.kirekov.spring.boot.test.example.repository.PersonRepository;
 import java.time.ZonedDateTime;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -23,6 +24,7 @@ import org.springframework.data.domain.Example;
 
 @SpringBootTest(webEnvironment = WebEnvironment.NONE)
 @AutoConfigureTestDatabase
+@DisplayName("PersonCreateServiceImpl: tests with H2 database and whole Spring context")
 class PersonCreateServiceImplSpringBootTest {
 
   @Autowired
@@ -38,6 +40,7 @@ class PersonCreateServiceImplSpringBootTest {
   }
 
   @Test
+  @DisplayName("Should create one person")
   void shouldCreateOnePerson() {
     final var people = personCreateService.createFamily(
         List.of("Simon"),
@@ -51,6 +54,7 @@ class PersonCreateServiceImplSpringBootTest {
   }
 
   @Test
+  @DisplayName("Should rollback if any user is not validated")
   void shouldRollbackIfAnyUserIsNotValidated() {
     doThrow(new ValidationFailedException(""))
         .when(personValidateService)
@@ -63,6 +67,7 @@ class PersonCreateServiceImplSpringBootTest {
   }
 
   @Test
+  @DisplayName("Should rollback if the only user is not validated")
   void shouldRollbackIfOneUserIsNotValidated() {
     doAnswer(invocation -> {
       final String lastName = invocation.getArgument(1);
