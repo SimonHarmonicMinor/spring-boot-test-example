@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.5.1'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'checkstyle'
+    id 'jacoco'
     id "org.sonarqube" version "3.2.0"
     id 'java'
 }
@@ -23,6 +24,12 @@ checkstyle {
     maxWarnings = 0
     showViolations = true
     toolVersion = '8.42'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
 }
 
 sonarqube {
