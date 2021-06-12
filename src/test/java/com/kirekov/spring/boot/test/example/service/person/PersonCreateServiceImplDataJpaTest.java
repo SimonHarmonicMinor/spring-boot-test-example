@@ -13,6 +13,7 @@ import com.kirekov.spring.boot.test.example.repository.PersonRepository;
 import java.time.ZonedDateTime;
 import java.util.List;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -22,6 +23,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Example;
 
 @DataJpaTest
+@DisplayName("PersonCreateServiceImpl: tests with repository auto configuration")
 class PersonCreateServiceImplDataJpaTest {
 
   @Autowired
@@ -46,6 +48,7 @@ class PersonCreateServiceImplDataJpaTest {
   }
 
   @Test
+  @DisplayName("Should create one person")
   void shouldCreateOnePerson() {
     final var people = personCreateService.createFamily(
         List.of("Simon"),
@@ -60,6 +63,7 @@ class PersonCreateServiceImplDataJpaTest {
 
   @Test
   @Disabled("This test always fails due to the fact that test itself is also transactional")
+  @DisplayName("Should rollback if any user is not validated")
   void shouldRollbackIfAnyUserIsNotValidated() {
     doThrow(new ValidationFailedException(""))
         .when(personValidateService)
@@ -72,6 +76,7 @@ class PersonCreateServiceImplDataJpaTest {
   }
 
   @Test
+  @DisplayName("Should rollback if the only user is not validated")
   void shouldRollbackIfOneUserIsNotValidated() {
     doAnswer(invocation -> {
       final String lastName = invocation.getArgument(1);
