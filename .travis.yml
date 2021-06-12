@@ -1,0 +1,13 @@
+language: java
+
+install: true
+
+script:
+  - "./gradlew clean build"
+
+cache:
+  directories:
+    - "$HOME/.m2/repository"
+    - "$HOME/.sonar/cache"
+    - "$HOME/.gradle"
+    - ".gradle"
