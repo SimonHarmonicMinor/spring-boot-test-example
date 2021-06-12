@@ -26,6 +26,12 @@ checkstyle {
     toolVersion = '8.42'
 }
 
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.enabled true
