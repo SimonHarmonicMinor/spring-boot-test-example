@@ -39,7 +39,7 @@
 
   <module name="LineLength">
     <property name="fileExtensions" value="java"/>
-    <property name="max" value="100"/>
+    <property name="max" value="120"/>
     <property name="ignorePattern"
       value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
   </module>
@@ -252,14 +252,6 @@
       <property name="lineWrappingIndentation" value="4"/>
       <property name="arrayInitIndent" value="2"/>
     </module>
-    <module name="AbbreviationAsWordInName">
-      <property name="ignoreFinal" value="false"/>
-      <property name="allowedAbbreviationLength" value="0"/>
-      <property name="tokens"
-        value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
-                    PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF, PATTERN_VARIABLE_DEF, RECORD_DEF,
-                    RECORD_COMPONENT_DEF"/>
-    </module>
     <module name="OverloadMethodsDeclarationOrder"/>
     <module name="VariableDeclarationUsageDistance"/>
     <module name="CustomImportOrder">
@@ -324,20 +316,6 @@
       <property name="allowMissingReturnTag" value="true"/>
       <property name="allowedAnnotations" value="Override, Test"/>
       <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
-    </module>
-    <module name="MissingJavadocMethod">
-      <property name="scope" value="public"/>
-      <property name="minLineCount" value="2"/>
-      <property name="allowedAnnotations" value="Override, Test"/>
-      <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF,
-                                   COMPACT_CTOR_DEF"/>
-    </module>
-    <module name="MissingJavadocType">
-      <property name="scope" value="protected"/>
-      <property name="tokens"
-        value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF,
-                      RECORD_DEF, ANNOTATION_DEF"/>
-      <property name="excludeScope" value="nothing"/>
     </module>
     <module name="MethodName">
       <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9_]*$"/>
