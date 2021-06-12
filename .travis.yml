@@ -1,13 +1,15 @@
 language: java
-
 install: true
-
 script:
   - "./gradlew clean build"
-
 cache:
   directories:
     - "$HOME/.m2/repository"
     - "$HOME/.sonar/cache"
     - "$HOME/.gradle"
     - ".gradle"
+addons:
+  sonarcloud:
+    organization: "simonharmonicminor"
+    token:
+      secure: "HHfqLviyi2Y7tvmLrPu7AUQAKDZDd2r9TJHSX+q5yLl+IbfLrcPwU6D0TPsnvrQxvNnTq+gLhBrpncfs+vg5fGoa1Wh/PbAikc3Jg6CtAmLuVl+t9EnIUpxeUPduZWZDMMhxY4J37pGTmaRA25YjkqlzfFIOcGQEjbrGru5EABee4OIU9EQmNGkxjujQk3lhLzTymF/Dyv0U97IPxvALGCQlhku3p6DgjyhvmYg3qXkLxCgITRjrTYPth3FpVSonTseCiIpGwyFCQyk1mWH2zhA7PiKQfvQIq5j9GqAGMPD8bXqfzVdmJ5pFZRBqyvVlWAhWISM74iwz0KB51Hw7F1Ol/LWd6W/zfGsvXkT4rP4zjjQ8PgVtFTp2Wy/U3dWY0HWhUk/2WA8Si5U9pPvT/egUDkl60eGmayzz+VkdwbWmbTmpOR5Z8/wm01YBw92kgGkUiC4AuBKDUkvKHGX2vBVJWOpz+twDU8LzJ3AJdM0QjfvDvalAmLKvV3T+OYdvCqMnhk55O+neUzt8UjJOPwWRTkfhSKSdEy5Y23yFu6/hhaiqLxavhSHA7Oi0RMFDCV2d7iWeMIXR7dBNcIMBosMJ/ZXCt6VTrR03ZkLBjMiXZMmP8ritffBND2ctWyakqiTRg7tpeLIQ3xXzi/LE7/Mvhy8kQivHtywRIIq+LOM="
