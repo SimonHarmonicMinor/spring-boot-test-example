@@ -1,7 +1,7 @@
 language: java
 install: true
 script:
-  - "./gradlew clean build"
+  - "./gradlew clean build jacocoTestReport sonarqube"
 cache:
   directories:
     - "$HOME/.m2/repository"
