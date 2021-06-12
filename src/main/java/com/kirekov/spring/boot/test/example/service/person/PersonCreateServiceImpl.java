@@ -9,8 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class PersonCreateServiceImpl implements
-    PersonCreateService {
+public class PersonCreateServiceImpl implements PersonCreateService {
 
   private final PersonValidateService personValidateService;
   private final PersonRepository personRepository;

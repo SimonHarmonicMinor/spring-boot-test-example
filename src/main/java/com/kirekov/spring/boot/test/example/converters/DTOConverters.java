@@ -10,6 +10,11 @@ import lombok.NoArgsConstructor;
 public final class DTOConverters {
 
   public static PersonDTO toPersonDTO(Person person) {
-    return new PersonDTO(person.getId(), person.getFirstName(), person.getLastName(), person.getDateCreated());
+    return new PersonDTO(
+        person.getId(),
+        person.getFirstName(),
+        person.getLastName(),
+        person.getDateCreated()
+    );
   }
 }

@@ -8,8 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
-class PersonValidateServiceImpl implements
-    PersonValidateService {
+class PersonValidateServiceImpl implements PersonValidateService {
 
   private final PersonRepository personRepository;
 
