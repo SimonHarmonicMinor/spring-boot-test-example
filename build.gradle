@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.kirekov'
-version = '0.0.1-SNAPSHOT'
+version = 'DEV-SNAPSHOT'
 sourceCompatibility = '11'
 
 java {
