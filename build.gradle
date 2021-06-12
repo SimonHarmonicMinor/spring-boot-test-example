@@ -8,6 +8,13 @@ group = 'com.kirekov'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+java {
+	withJavadocJar()
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_11
+	targetCompatibility = JavaVersion.VERSION_11
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
