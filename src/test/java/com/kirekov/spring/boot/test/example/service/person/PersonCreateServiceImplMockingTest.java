@@ -10,7 +10,6 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.kirekov.spring.boot.test.example.dto.PersonDTO;
 import com.kirekov.spring.boot.test.example.entity.Person;
 import com.kirekov.spring.boot.test.example.exception.ValidationFailedException;
 import com.kirekov.spring.boot.test.example.repository.PersonRepository;
