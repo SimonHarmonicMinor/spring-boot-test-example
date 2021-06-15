@@ -1,6 +1,6 @@
 package com.kirekov.spring.boot.test.example.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.kirekov.spring.boot.test.example.entity.Person;
 import java.util.Set;
@@ -12,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 @DataJpaTest
 @DisplayName("PersonRepository: findAllLastNames tests")
 class PersonRepositoryDataJpaTest {
+
   @Autowired
   private PersonRepository personRepository;
 
