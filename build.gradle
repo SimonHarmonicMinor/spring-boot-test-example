@@ -80,4 +80,9 @@ dependencyManagement {
 
 test {
     useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+        events = ["failed", "skipped", "passed"]
+        exceptionFormat = "full"
+    }
 }
