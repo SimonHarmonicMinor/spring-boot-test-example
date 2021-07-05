@@ -6,4 +6,5 @@ public final class TestProfiles {
   }
 
   public static final String TEST_CONTAINERS = "test-containers";
+  public static final String TEST_CONTAINERS_FLYWAY = "test-containers-flyway";
 }
