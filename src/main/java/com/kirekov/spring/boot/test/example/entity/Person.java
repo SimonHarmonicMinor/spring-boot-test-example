@@ -29,6 +29,7 @@ public class Person {
   @Column(name = "last_name")
   private String lastName;
 
+  @Column(name = "date_created")
   private ZonedDateTime dateCreated;
 
   @PrePersist
