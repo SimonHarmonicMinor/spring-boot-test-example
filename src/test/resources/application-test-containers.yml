@@ -6,3 +6,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+  flyway:
+    enabled: false
