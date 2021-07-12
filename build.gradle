@@ -80,10 +80,36 @@ dependencyManagement {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        excludeTags "test-containers", "flyway"
+    }
     testLogging {
         showStandardStreams = true
         events = ["failed", "skipped", "passed"]
         exceptionFormat = "full"
     }
+}
+
+task testContainers(type: Test) {
+    useJUnitPlatform {
+        includeTags "test-containers"
+    }
+    testLogging {
+        showStandardStreams = true
+        events = ["failed", "skipped", "passed"]
+        exceptionFormat = "full"
+    }
+    shouldRunAfter test
+}
+
+task testFlyway(type: Test) {
+    useJUnitPlatform {
+        includeTags "flyway"
+    }
+    testLogging {
+        showStandardStreams = true
+        events = ["failed", "skipped", "passed"]
+        exceptionFormat = "full"
+    }
+    shouldRunAfter testFlyway
 }

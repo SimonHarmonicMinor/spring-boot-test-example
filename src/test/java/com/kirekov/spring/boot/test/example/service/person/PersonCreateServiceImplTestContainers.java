@@ -1,6 +1,7 @@
 package com.kirekov.spring.boot.test.example.service.person;
 
 import static com.kirekov.spring.boot.test.example.TestProfiles.TEST_CONTAINERS;
+import static com.kirekov.spring.boot.test.example.TestTags.TEST_CONTAINERS_TAG;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -15,6 +16,7 @@ import java.time.ZonedDateTime;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,6 +30,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Testcontainers
 @ActiveProfiles(TEST_CONTAINERS)
 @DisplayName("PersonCreateServiceImpl: tests with PostgreSQL Testcontainers database and whole Spring context")
+@Tag(TEST_CONTAINERS_TAG)
 class PersonCreateServiceImplTestContainers {
 
   @Autowired
