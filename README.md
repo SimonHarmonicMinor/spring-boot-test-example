@@ -5,13 +5,8 @@ of [Spring Boot Test](https://docs.spring.io/spring-framework/docs/current/refer
 
 Those features are included.
 
-1. [Service layer tests + Mocks](https://medium.com/javarevisited/spring-boot-testing-data-and-services-bc8b4c62ee8f?source=friends_link&sk=86148a772616274202776f4515c078e4)
-1. [Service layer tests + H2 Database](https://medium.com/javarevisited/spring-boot-testing-data-and-services-bc8b4c62ee8f?source=friends_link&sk=86148a772616274202776f4515c078e4)
-1. Service layer tests + Testcontainers PostgreSQL
-1. Repository tests + H2 Database
-1. Repository tests + Testcontainers PostgreSQL
-1. Controller tests + WebMvcMock
-1. Controller tests + TestRestTemplate
+1. [Data and Services](https://medium.com/javarevisited/spring-boot-testing-data-and-services-bc8b4c62ee8f?source=friends_link&sk=86148a772616274202776f4515c078e4)
+1. [Testcontainers + Flyway](https://medium.com/javarevisited/spring-boot-testing-data-and-services-bc8b4c62ee8f?source=friends_link&sk=86148a772616274202776f4515c078e4)
 
 # Status
 
