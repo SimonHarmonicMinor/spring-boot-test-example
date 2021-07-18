@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import lombok.Getter;
 
@@ -33,7 +34,8 @@ public class Person {
   private ZonedDateTime dateCreated;
 
   @PrePersist
-  void prePersist() {
+  @PreUpdate
+  void setCurrentTimeAsDateCreated() {
     dateCreated = ZonedDateTime.now();
   }
 
